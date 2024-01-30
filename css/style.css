@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "DreamAvenue";
+  src: url(../fonts/FontsFree-Net-Dream-Avenue.ttf); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+  background-color: #000; /* Assuming a dark background */
+  height: 100%; /* Full viewport height */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; /* Add padding at top and bottom for some space */
+  background-color: #000; /* Black background */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push the brand and the nav to the edges */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum navbar width */
+  margin: 0 auto; /* Center the navbar */
+  
+}
+
+nav {
+  flex-grow: 1; /* Allow nav to grow to use up available space */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the links within nav */
+  padding: 20px; /* Adjust to your preference */
+  margin: 0;
+  gap: 10px; /* Space between items */
+  background-color: #343434; /* Slightly lighter gray background */
+  border-radius:30px; /* Match the button border-radius */
+  max-width: 580px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px; /* Padding inside links */
+  background-color: #131313; /* Remove individual button backgrounds */
+  border-radius: 20px; /* Rounded corners for buttons */
+  transition: background-color 0.3s ease;
+  border: 1px solid #ffffff;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: #464646; /* Darker on hover/focus */
+  color: #ddd;
+}
+
+.brand-title {
+  flex-shrink: 0; /* Prevent the brand title from shrinking */
+  font-size: 3.5em;
+  color: #FFFFFF;
+  font-family: "DreamAvenue";
+  margin-right: auto;
+  padding-right:100px;
+}
+
+.language-selector {
+  padding-left: 10px; /* This adds some space between the nav and the language selector */
+}
+
+.language-selector .lang-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px; /* Padding on the left of the language button */
+}
+
+.language-selector .lang-btn img {
+  width: 22px; /* Flag image width */
+  height: auto;
+  margin-right: 5px; /* Space between the flag and text */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center; /* Center items vertically on small screens */
+  }
+
+  .brand-title {
+    margin-bottom: 20px; /* Add space between the title and the nav items */
+  }
+
+  .language-selector {
+    order: 3; /* Put the language selector at the bottom */
+    margin-top: 20px; /* Add space above language selector */
+  }
+
+  nav ul {
+    order: 2; /* Navigation comes second */
+    width: 100%; /* Full width nav */
+    justify-content: space-around; /* Space out the nav items */
+  }
+
+  nav ul li a {
+    width: 100%; /* Full width links */
+    text-align: center; /* Center text in links */
+  }
+
+  nav {
+    order: 1; /* Brand title comes first */
+    width: 100%; /* Full width for brand title */
+  }
+}
