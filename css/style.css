@@ -10,17 +10,32 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+body{
+  background-image: url('../img/background.png'); /* Caminho para a imagem de fundo */
+  background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Altura total da viewport */
+  width: 100vw; /* Largura total da viewport */
+}
+
 body, html {
   background-color: #000; /* Assuming a dark background */
   height: 100%; /* Full viewport height */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0; /* Add padding at top and bottom for some space */
-  background-color: #000; /* Black background */
+  padding: 20px 0;
+  background-color:transparent; /* Transparência aplicada para visualizar o fundo */
 }
 
 .navbar {
@@ -29,8 +44,20 @@ header {
   justify-content: space-between; /* This will push the brand and the nav to the edges */
   width: 100%; /* Full width */
   max-width: 1200px; /* Maximum navbar width */
-  margin: 0 auto; /* Center the navbar */
-  
+  margin:auto ; /* Center the navbar */ 
+}
+
+.hero-background {
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh; /* ou 100vh se você quiser que ocupe a tela inteira */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha verticalmente */
+  align-items: center; /* Alinha horizontalmente */
 }
 
 nav {
@@ -42,22 +69,24 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center; /* Center the links within nav */
-  padding: 20px; /* Adjust to your preference */
+  padding: 16px; /* Adjust to your preference */
   margin: 0;
-  gap: 10px; /* Space between items */
+  gap: 7px; /* Space between items */
   background-color: #343434; /* Slightly lighter gray background */
   border-radius:30px; /* Match the button border-radius */
-  max-width: 580px;
+  max-width: 530px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
-  padding: 10px 15px; /* Padding inside links */
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 20px; /* Padding inside links */
   background-color: #131313; /* Remove individual button backgrounds */
-  border-radius: 20px; /* Rounded corners for buttons */
+  border-radius: 15px; /* Rounded corners for buttons */
   transition: background-color 0.3s ease;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -75,7 +104,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .language-selector {
-  padding-left: 10px; /* This adds some space between the nav and the language selector */
+  padding-left: 30px; /* This adds some space between the nav and the language selector */ 
 }
 
 .language-selector .lang-btn {
@@ -87,12 +116,14 @@ nav ul li a:hover, nav ul li a:focus {
   border: none;
   cursor: pointer;
   padding-left: 10px; /* Padding on the left of the language button */
+  
 }
 
 .language-selector .lang-btn img {
   width: 22px; /* Flag image width */
   height: auto;
   margin-right: 5px; /* Space between the flag and text */
+  
 }
 
 @media (max-width: 768px) {
@@ -128,5 +159,102 @@ nav ul li a:hover, nav ul li a:focus {
   nav {
     order: 1; /* Brand title comes first */
     width: 100%; /* Full width for brand title */
+  }
+}
+/*----------------------------*/
+/*   TITLE PORTFOLIO CENTER  */
+/*----------------------------*/
+.portfolio-intro {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 450px;
+  color: white;
+  width: 100%; /* Garanta que o texto possa expandir para a largura total */
+}
+
+.portfolio-intro h1 {
+  font-size: 4em;
+  margin-bottom: em;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.portfolio-intro p {
+  font-size: 1.5em; /* Define o tamanho do parágrafo */
+  max-width: 600px; /* Define a largura máxima do parágrafo */
+  margin: 0 auto; /* Centraliza o parágrafo */
+} 
+
+/* Ajustes para responsividade */
+@media (min-width: 768px) {
+  .portfolio-intro {
+    padding-top: 250px;
+    padding-bottom: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-intro {
+    padding-top: 100px; /* Diminua o padding para telas menores se necessário */
+    padding-bottom: 150px;
+  }
+}
+/*----------------------------*/
+/*     ABOUT ME SECTION       */
+/*----------------------------*/
+.about-me {
+  padding: 100px 0; /* Adjust the top and bottom padding as needed */
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+}
+
+.about-me-content {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between the text and the image */
+  padding-left: 100px; /* Adjust as needed for left padding */
+}
+
+.about-me-content h2 {
+  font-size: 2em; /* Adjust as needed */
+  font-weight: bold;
+  margin-right: 50px; /* Add right margin to push away from the text */
+}
+
+.about-me-content h3 {
+  font-size: 4em; /* Larger font size for the name */
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-family: "DreamAvenue", sans-serif;
+}
+
+.about-me-content p {
+  font-size: 1em; /* Adjust as needed */
+  max-width: 500px; /* Adjust the width of the paragraph */
+}
+
+.about-me-image {
+  /* Add styles if needed */
+}
+
+/* Adjust the media query as necessary */
+@media (max-width: 768px) {
+  .about-me-content {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .about-me-content h2, .about-me-content h3, .about-me-content p {
+    margin-right: 0;
+  }
+
+  .about-me-image {
+    margin-top: 20px; /* Add space above the image */
   }
 }
