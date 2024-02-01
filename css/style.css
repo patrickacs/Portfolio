@@ -27,6 +27,7 @@ body, html {
   background-size: cover;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -203,58 +204,75 @@ nav ul li a:hover, nav ul li a:focus {
 /*     ABOUT ME SECTION       */
 /*----------------------------*/
 .about-me {
-  padding: 100px 0; /* Adjust the top and bottom padding as needed */
-  color: #fff; /* White text */
-  background-color: #000; /* Black background */
+  padding: 60px  0px; /* Ajuste para o espaçamento vertical desejado */
+  color: #fff; /* Texto branco */
+  background-color: #000; /* Fundo preto */
   display: flex;
-  justify-content: flex-start; /* Align content to the left */
-  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: row; /* Organiza os itens em linha */
 }
 
 .about-me-content {
-  max-width: 1200px;
-  margin: 0 auto; /* Center the content */
+  flex: 1; /* Ocupa o espaço disponível proporcionalmente */
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space between the text and the image */
-  padding-left: 100px; /* Adjust as needed for left padding */
+  flex-direction: column; /* Itens empilhados verticalmente dentro deste contêiner */
+  align-items: center; /* Alinha os itens à esquerda */
+  padding-right: 10px; /* Espaçamento entre o texto e a imagem */
 }
 
 .about-me-content h2 {
-  font-size: 2em; /* Adjust as needed */
-  font-weight: bold;
-  margin-right: 50px; /* Add right margin to push away from the text */
+  font-size: 130px;
+  font-weight: 400;
+  letter-spacing: -9px;
+  text-align: center;
+  padding-left:100px;
 }
 
 .about-me-content h3 {
-  font-size: 4em; /* Larger font size for the name */
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  font-family: "DreamAvenue", sans-serif;
+  font-family: "DreamAvenue";
+  letter-spacing: -1px;
+  font-size: 69px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 100px;
+  padding-bottom: 15px;
 }
 
 .about-me-content p {
-  font-size: 1em; /* Adjust as needed */
-  max-width: 500px; /* Adjust the width of the paragraph */
+  font-size: 33px;
+  max-width: 700px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-left: auto; /* Alinha à esquerda com o restante do conteúdo */
+  text-align: justify;
+  text-transform: uppercase;
+  padding-left: 100px;
 }
+
+
+.about-me-content h2,
+.about-me-content h3,
+.about-me-content p {
+  margin: -12px 0; /* Espaçamento vertical entre os itens */
+  text-align: justify;
+  padding-left:auto;
+}
+
+/* Estilos específicos para h2 e h3 se necessário */
 
 .about-me-image {
-  /* Add styles if needed */
+  flex: 1; /* Ocupa o espaço disponível proporcionalmente */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
 }
 
-/* Adjust the media query as necessary */
-@media (max-width: 768px) {
-  .about-me-content {
-    flex-direction: column;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .about-me-content h2, .about-me-content h3, .about-me-content p {
-    margin-right: 0;
-  }
-
-  .about-me-image {
-    margin-top: 20px; /* Add space above the image */
-  }
+.about-me-image img {
+  width: auto; /* Mantém a proporção da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  max-width: none; /* Permite que a imagem cresça além de 100% se necessário */
+  max-height: 100%; /* Ajuste para o tamanho desejado da imagem, poderia ser um valor em px também */
 }
+
