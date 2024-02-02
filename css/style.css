@@ -49,7 +49,7 @@ header {
 }
 
 .hero-background {
-  background-image: url('../img/background.png');
+  background-image: url('../assets/img/background.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -276,3 +276,128 @@ nav ul li a:hover, nav ul li a:focus {
   max-height: 100%; /* Ajuste para o tamanho desejado da imagem, poderia ser um valor em px também */
 }
 
+/*----------------------------*/
+/*    My Experience Section   */
+/*----------------------------*/
+
+.my-experience {
+  background-color: #000; /* Fundo preto para a seção */
+}
+
+.experience-header {
+  background-image: url('../assets/img/myexperiencebar.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 130px 0; /* Ajuste do espaçamento conforme a imagem */
+}
+
+.experience-header h1 {
+  padding-right: 4.1em;
+  margin-bottom: -15px;
+}
+
+.experience-header h1,
+.experience-header h2 {
+  display: inline-block; /* Mantém os títulos na mesma linha */
+  color: white;
+  font-size: 6.5em; /* Pode precisar ajustar dependendo do tamanho da tela */
+  margin-top: -0.3em; /* Remove margens padrão */
+  line-height: 1; /* Ajusta o espaçamento entre linhas */
+  font-weight: 500;
+  vertical-align: top; /* Alinha verticalmente com a linha */
+}
+
+.experience-title {
+  display: inline-block; /* Isso ajuda a manter o MY e EXPERIENCE na mesma linha */
+}
+
+.experience-title h1,
+.experience-title h2 {
+  display: inline; /* Mantém os títulos na mesma linha */
+  color: white;
+  font-weight: 600;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+}
+
+.experience-title h1 {
+  font-size: 6em;
+  margin-bottom: -10em;
+  /* Ajuste de alinhamento conforme necessário */
+}
+
+.experience-title h2 {
+  font-size: 6em;
+  /* Ajuste de alinhamento conforme necessário */
+  margin-left: -10em; /* Ajuste fino para alinhamento do texto */
+}
+.experience-line {
+  margin: 22px;
+}
+
+.experience-content {
+  background-color: #000; /* Fundo preto para a lista de experiências */
+  padding: 50px; /* Espaçamento interno */
+}
+
+.experience-list {
+  /* Estilização da lista de experiências */
+}
+
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding: 20px 0;
+  color: white;
+}
+
+.experience-details h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.experience-details p {
+  font-size: 1em;
+  margin: 0;
+}
+
+.experience-toggle span {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.add-experience-button {
+  /* Estilização do botão */
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 30px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos móveis */
+  .experience-title h1,
+  .experience-title h2 {
+    font-size: 3em; /* Reduz o tamanho do texto para dispositivos móveis */
+  }
+
+  .experience-content {
+    padding: 30px; /* Reduz o preenchimento para dispositivos móveis */
+  }
+
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-experience-button {
+    /* Ajustes para o botão em dispositivos móveis */
+    width: 90%;
+  }
+}
