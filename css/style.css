@@ -395,12 +395,12 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: transparent;
   border-radius: 40px;
   border: 2px solid #fff;
-  padding: 8px 130px;
+  padding: 1px 150px;
   font-size: 3.5em;
   cursor: pointer;
   margin-top: 70px;
   color: white;
-  margin-left: 1300px;
+  margin-left: 1250px;
   position: block;
 }
 
@@ -425,3 +425,46 @@ nav ul li a:hover, nav ul li a:focus {
     width: 90%;
   }
 }
+
+/*----------------------------*/
+/*    Letreiro Ticker         */
+/*----------------------------*/
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  padding: 10px 0;
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: move 11s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-content {
+  display: inline-block;
+  min-width: 200%; /* Ajuste para garantir que haja conteúdo suficiente para o loop contínuo */
+  color: #fff; /* Cor do texto */
+  font-size: 3.5rem; /* Tamanho do texto */
+}
+
+.ticker-wrap:hover .ticker {
+  animation-play-state: paused; /* Pausa a animação quando o mouse está em cima */
+}
+
+/*----------------------------*/
+/*    Personal Projects       */
+/*----------------------------*/
+
