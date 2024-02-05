@@ -174,10 +174,10 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .portfolio-intro h1 {
-  font-size: 4em;
+  font-size: 6.5em;
   margin-bottom: em;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .portfolio-intro p {
@@ -204,7 +204,7 @@ nav ul li a:hover, nav ul li a:focus {
 /*     ABOUT ME SECTION       */
 /*----------------------------*/
 .about-me {
-  padding: 60px  0px; /* Ajuste para o espaçamento vertical desejado */
+  padding: 100px  0px; /* Ajuste para o espaçamento vertical desejado */
   color: #fff; /* Texto branco */
   background-color: #000; /* Fundo preto */
   display: flex;
@@ -299,13 +299,13 @@ nav ul li a:hover, nav ul li a:focus {
 
 .experience-header h1,
 .experience-header h2 {
-  display: inline-block; /* Mantém os títulos na mesma linha */
+  display: inline-block; /* Keeps the titles on the same line */
   color: white;
-  font-size: 6.5em; /* Pode precisar ajustar dependendo do tamanho da tela */
-  margin-top: -0.3em; /* Remove margens padrão */
-  line-height: 1; /* Ajusta o espaçamento entre linhas */
+  font-size: 6.5em; /* May need to adjust depending on screen size */
+  margin-top: -0.3em; /* Removes default margins */
+  line-height: 1; /* Adjusts line spacing */
   font-weight: 500;
-  vertical-align: top; /* Alinha verticalmente com a linha */
+  vertical-align: top; /* Vertically aligns with the line */ /* Alinha verticalmente com a linha */
 }
 
 .experience-title {
@@ -347,48 +347,72 @@ nav ul li a:hover, nav ul li a:focus {
 
 .experience-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #fff;
-  padding: 20px 0;
+  justify-content: space-between;
   color: white;
+  width: 80%; /* Ou qualquer outra largura que você desejar */
+  margin: auto; /* Isso centraliza o .experience-item horizontalmente */
+}
+
+.content-with-border {
+  border-bottom: 1px solid #fff; /* A linha divisória */
+  flex-grow: 1;
+  width: 100%; /* Ou qualquer outra largura que você desejar */
+  margin-right: auto; /* Para empurrar o toggle para a direita */
+}
+
+.experience-details {
+  display: flex;
+  justify-content: start; /* Alinha os itens à esquerda */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Exemplo: Define a largura dos detalhes e da linha */
 }
 
 .experience-details h3 {
-  font-size: 1.5em;
-  margin: 0;
+  font-size: 2em;
+  margin-right: auto; /* Isso empurra tudo o que vem depois para a direita */
+  padding-left: 80px;
 }
 
 .experience-details p {
-  font-size: 1em;
-  margin: 0;
+  font-size: 2em;
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-right: 100px;
+}
+
+.experience-toggle {
+  padding-left: 20px; /* Adiciona um pouco de espaço antes do ícone + */
 }
 
 .experience-toggle span {
-  font-size: 2em;
+  font-size: 5.5em; /* Ajuste o tamanho do ícone conforme necessário */
   cursor: pointer;
+  padding-right: 40px;
 }
 
 .add-experience-button {
   /* Estilização do botão */
   background-color: transparent;
+  border-radius: 40px;
   border: 2px solid #fff;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 8px 130px;
+  font-size: 3.5em;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 70px;
   color: white;
+  margin-left: 1300px;
+  position: block;
 }
 
 @media (max-width: 768px) {
-  /* Ajustes para dispositivos móveis */
-  .experience-title h1,
-  .experience-title h2 {
-    font-size: 3em; /* Reduz o tamanho do texto para dispositivos móveis */
+  /* Adjustments for mobile devices */
+  .experience-header h1,
+  .experience-header h2 {
+    font-size: 3em; /* Reduces text size for mobile devices */
   }
 
   .experience-content {
-    padding: 30px; /* Reduz o preenchimento para dispositivos móveis */
+    padding: 30px; /* Reduces padding for mobile devices */
   }
 
   .experience-item {
@@ -397,7 +421,7 @@ nav ul li a:hover, nav ul li a:focus {
   }
 
   .add-experience-button {
-    /* Ajustes para o botão em dispositivos móveis */
+    /* Adjustments for the button on mobile devices */
     width: 90%;
   }
 }
