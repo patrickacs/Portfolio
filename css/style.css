@@ -468,3 +468,53 @@ nav ul li a:hover, nav ul li a:focus {
 /*    Personal Projects       */
 /*----------------------------*/
 
+.selected-works {
+  padding: 100px 0; /* Adjust vertical spacing as needed */
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* Required for absolute positioning of children */
+}
+
+.projects-intro {
+  font-size: 2em;
+  background-image: url('../assets/img/selectedbg.png'); /* Adjust the path as needed */
+  background-repeat: no-repeat;
+  background-size: cover; /* This will cover the entire area of the element */
+  background-position: left center; /* Adjust the position to fit the image as needed */
+  padding: 40px 500px 100px 0px; /* Adjust the padding to ensure there's space for the background */ 
+  height: 500px;
+  text-align: left;
+  margin-left: -1000px;
+  border-top-right-radius: 150px; /* Ajuste o valor conforme necessário */
+  background-clip: border-box; /* Garante que o background respeite o border-radius */
+  overflow: hidden; /* Isso garante que o background não vaze fora do border-radius */
+
+}
+
+.projects-intro h1, h2{
+  font-weight: bold;
+  margin: 0;
+  padding-left: 25%; /* Adjust text alignment as per design */
+  font-size: 80px;
+  line-height: 90% /* Adjust line-height as per design */
+  
+  
+}
+.projects-intro h2 {
+  
+}
+
+
+.projects-intro p {
+  margin: 0;
+  padding-left: 4.5%; /* Adjust the padding to align text as per design */
+  max-width: 50%; /* Adjust the width of the paragraph to your preference */
+  position: absolute; /* Position it over the background */
+  bottom: 20%; /* Position it from the bottom */
+  right: 55%; /* Align text from the left */
+  font-size: 37px;
+  font-weight: 500;
+}
