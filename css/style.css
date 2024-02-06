@@ -518,3 +518,25 @@ nav ul li a:hover, nav ul li a:focus {
   font-size: 37px;
   font-weight: 500;
 }
+
+.circle-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff; /* ou a cor que desejar para o texto */
+  font-size: 2em; /* ou o tamanho que desejar para o texto */
+  width: 1000px; /* ou a largura que desejar */
+  text-align: center;
+  margin: 100px auto;
+  animation: rotate 10s linear infinite;
+}
+
+.circle {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 160px;
+  background-position: absolute;
+  width: 55%;
+}
+
