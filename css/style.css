@@ -290,10 +290,15 @@ nav ul li a:hover, nav ul li a:focus {
   background-position: center;
   text-align: center;
   padding: 130px 0; /* Ajuste do espaçamento conforme a imagem */
+
 }
 
 .experience-header h1 {
   padding-right: 4.1em;
+  margin-bottom: -15px;
+}
+.experience-header h2 {
+  padding-right: 4.5em;
   margin-bottom: -15px;
 }
 
