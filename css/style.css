@@ -480,7 +480,6 @@ nav ul li a:hover, nav ul li a:focus {
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  position: relative; /* Required for absolute positioning of children */
 }
 
 .projects-intro {
@@ -489,25 +488,23 @@ nav ul li a:hover, nav ul li a:focus {
   background-repeat: no-repeat;
   background-size: cover; /* This will cover the entire area of the element */
   background-position: left center; /* Adjust the position to fit the image as needed */
-  padding: 40px 500px 100px 0px; /* Adjust the padding to ensure there's space for the background */ 
-  height: 500px;
+  padding: 25px 80px 30px 60px; /* Adjust the padding to ensure there's space for the background */ 
+  height: 535px;
   text-align: left;
-  margin-left: -1000px;
   border-top-right-radius: 150px; /* Ajuste o valor conforme necessário */
   background-clip: border-box; /* Garante que o background respeite o border-radius */
   overflow: hidden; /* Isso garante que o background não vaze fora do border-radius */
-
+  border: 5px solid #ffffff;
+  width: 1000px;
 }
 
 .projects-intro h1, h2{
   font-weight: bold;
   margin: 0;
-  padding-left: 25%; /* Adjust text alignment as per design */
-  font-size: 80px;
-  line-height: 90% /* Adjust line-height as per design */
-  
-  
+  font-size: 85px;
+  line-height: 85px /* Adjust line-height as per design */
 }
+
 .projects-intro h2 {
   
 }
@@ -515,17 +512,15 @@ nav ul li a:hover, nav ul li a:focus {
 
 .projects-intro p {
   margin: 0;
-  padding-left: 4.5%; /* Adjust the padding to align text as per design */
-  max-width: 50%; /* Adjust the width of the paragraph to your preference */
-  position: absolute; /* Position it over the background */
+  padding-left: .5%; /* Adjust the padding to align text as per design */
   bottom: 20%; /* Position it from the bottom */
-  right: 55%; /* Align text from the left */
-  font-size: 37px;
+  font-size: 42px;
   font-weight: 500;
+  justify-content: flex-start;
+
 }
 
 .circle-container {
-  position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -540,8 +535,61 @@ nav ul li a:hover, nav ul li a:focus {
 .circle {
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 160px;
   background-position: absolute;
   width: 55%;
+}
+
+.paolo- {
+  margin: 0;
+}
+.paolo-fornasier {
+  letter-spacing: 5px;
+  line-height: 77.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Open Sans';
+}
+.creare-il-marchio {
+  font-size: 21.5px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  width: 177.8px;
+}
+.il-payoff {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 216.9px;
+}
+.paolo-fornasier-parent {
+  width: 445.6px;
+  height: 337px;
+}
+.plus-icon {
+  font-size: 109px;
+  line-height: 50px;
+}
+.group-container {
+  width: 538px;
+  height: 337px;
+}
+.rectangle-icon {
+  border-radius: 00px 150px 150px 00px;
+  width: 860px;
+  height: 400px;
+  object-fit: contain;
+  border : solid #ffffff;
+}
+.group-parent {
+  font-size: 60px;
+  color: #fff;
+  font-family: Inter;
+  border: red 2px solid;
+  display: flex;
+  height: 400px;
+  justify-content: center;
 }
 
