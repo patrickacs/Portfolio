@@ -222,7 +222,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .about-me-content h2 {
-  font-size: 130px;
+  font-size: 129px;
   font-weight: 400;
   letter-spacing: -9px;
   text-align: center;
@@ -236,7 +236,6 @@ nav ul li a:hover, nav ul li a:focus {
   font-weight: 500;
   text-align: center;
   padding-left: 100px;
-  padding-bottom: 15px;
 }
 
 .about-me-content p {
@@ -289,17 +288,15 @@ nav ul li a:hover, nav ul li a:focus {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 130px 0; /* Ajuste do espaçamento conforme a imagem */
+  padding: 150px 0; /* Ajuste do espaçamento conforme a imagem */
 
 }
 
 .experience-header h1 {
-  padding-right: 4.1em;
-  margin-bottom: -15px;
+  padding-right: 1.1em;
 }
 .experience-header h2 {
-  padding-right: 4.5em;
-  margin-bottom: -15px;
+  padding-right: 0.5em;
 }
 
 .experience-header h1,
@@ -338,7 +335,7 @@ nav ul li a:hover, nav ul li a:focus {
   margin-left: -10em; /* Ajuste fino para alinhamento do texto */
 }
 .experience-line {
-  margin: 22px;
+  margin: 20px;
 }
 
 .experience-content {
@@ -509,7 +506,6 @@ nav ul li a:hover, nav ul li a:focus {
   
 }
 
-
 .projects-intro p {
   margin: 0;
   padding-left: .5%; /* Adjust the padding to align text as per design */
@@ -521,9 +517,6 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .circle-container {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   color: #fff; /* ou a cor que desejar para o texto */
   font-size: 2em; /* ou o tamanho que desejar para o texto */
   width: 1000px; /* ou a largura que desejar */
@@ -538,11 +531,17 @@ nav ul li a:hover, nav ul li a:focus {
   background-position: absolute;
   width: 55%;
 }
+/*----------------------------*/
+/*   project cards            */
+/*----------------------------*/
 
 .paolo- {
   margin: 0;
 }
 .paolo-fornasier {
+  position: relative;
+  top: 0px;
+  left: 46px;
   letter-spacing: 5px;
   line-height: 77.8px;
   text-transform: uppercase;
@@ -550,6 +549,9 @@ nav ul li a:hover, nav ul li a:focus {
   font-family: 'Open Sans';
 }
 .creare-il-marchio {
+  position: relative;
+  top: 188px;
+  left: 0px;
   font-size: 21.5px;
   line-height: 24px;
   display: flex;
@@ -557,6 +559,9 @@ nav ul li a:hover, nav ul li a:focus {
   width: 177.8px;
 }
 .il-payoff {
+  position: absolute;
+  top: 187px;
+  left: 228.69px;
   font-size: 16px;
   line-height: 25px;
   text-align: left;
@@ -565,31 +570,41 @@ nav ul li a:hover, nav ul li a:focus {
   width: 216.9px;
 }
 .paolo-fornasier-parent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 445.6px;
   height: 337px;
 }
-.plus-icon {
+.div {
+  position: absolute;
+  top: 143px;
+  right: 0px;
   font-size: 109px;
   line-height: 50px;
 }
 .group-container {
+  position: absolute;
+  top: 32px;
+  left: 0px;
   width: 538px;
   height: 337px;
 }
 .rectangle-icon {
-  border-radius: 00px 150px 150px 00px;
-  width: 860px;
+  position: absolute;
+  top: 0px;
+  left: 590px;
+  width: 1349px;
   height: 400px;
   object-fit: contain;
-  border : solid #ffffff;
 }
 .group-parent {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  text-align: right;
   font-size: 60px;
   color: #fff;
   font-family: Inter;
-  border: red 2px solid;
-  display: flex;
-  height: 400px;
-  justify-content: center;
 }
 
