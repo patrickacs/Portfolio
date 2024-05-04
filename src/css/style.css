@@ -1,0 +1,616 @@
+@font-face {
+  font-family: "DreamAvenue";
+  src: url(../fonts/FontsFree-Net-Dream-Avenue.ttf); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background-image: url('../img/background.png'); /* Caminho para a imagem de fundo */
+  background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Altura total da viewport */
+  width: 100vw; /* Largura total da viewport */
+}
+
+body, html {
+  background-color: #000; /* Assuming a dark background */
+  height: 100%; /* Full viewport height */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color:transparent; /* Transparência aplicada para visualizar o fundo */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push the brand and the nav to the edges */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum navbar width */
+  margin:auto ; /* Center the navbar */ 
+}
+
+.hero-background {
+  background-image: url('../assets/img/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh; /* ou 100vh se você quiser que ocupe a tela inteira */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha verticalmente */
+  align-items: center; /* Alinha horizontalmente */
+}
+
+nav {
+  flex-grow: 1; /* Allow nav to grow to use up available space */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the links within nav */
+  padding: 16px; /* Adjust to your preference */
+  margin: 0;
+  gap: 7px; /* Space between items */
+  background-color: #343434; /* Slightly lighter gray background */
+  border-radius:30px; /* Match the button border-radius */
+  max-width: 530px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 20px; /* Padding inside links */
+  background-color: #131313; /* Remove individual button backgrounds */
+  border-radius: 15px; /* Rounded corners for buttons */
+  transition: background-color 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: #464646; /* Darker on hover/focus */
+  color: #ddd;
+}
+
+.brand-title {
+  flex-shrink: 0; /* Prevent the brand title from shrinking */
+  font-size: 3.5em;
+  color: #FFFFFF;
+  font-family: "DreamAvenue";
+  margin-right: auto;
+  padding-right:100px;
+}
+
+.language-selector {
+  padding-left: 30px; /* This adds some space between the nav and the language selector */ 
+}
+
+.language-selector .lang-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px; /* Padding on the left of the language button */
+  
+}
+
+.language-selector .lang-btn img {
+  width: 22px; /* Flag image width */
+  height: auto;
+  margin-right: 5px; /* Space between the flag and text */
+  
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center; /* Center items vertically on small screens */
+  }
+
+  .brand-title {
+    margin-bottom: 20px; /* Add space between the title and the nav items */
+  }
+
+  .language-selector {
+    order: 3; /* Put the language selector at the bottom */
+    margin-top: 20px; /* Add space above language selector */
+  }
+
+  nav ul {
+    order: 2; /* Navigation comes second */
+    width: 100%; /* Full width nav */
+    justify-content: space-around; /* Space out the nav items */
+  }
+
+  nav ul li a {
+    width: 100%; /* Full width links */
+    text-align: center; /* Center text in links */
+  }
+
+  nav {
+    order: 1; /* Brand title comes first */
+    width: 100%; /* Full width for brand title */
+  }
+}
+/*----------------------------*/
+/*   TITLE PORTFOLIO CENTER  */
+/*----------------------------*/
+.portfolio-intro {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 450px;
+  color: white;
+  width: 100%; /* Garanta que o texto possa expandir para a largura total */
+}
+
+.portfolio-intro h1 {
+  font-size: 6.5em;
+  margin-bottom: em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.portfolio-intro p {
+  font-size: 1.5em; /* Define o tamanho do parágrafo */
+  max-width: 600px; /* Define a largura máxima do parágrafo */
+  margin: 0 auto; /* Centraliza o parágrafo */
+} 
+
+/* Ajustes para responsividade */
+@media (min-width: 768px) {
+  .portfolio-intro {
+    padding-top: 250px;
+    padding-bottom: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-intro {
+    padding-top: 100px; /* Diminua o padding para telas menores se necessário */
+    padding-bottom: 150px;
+  }
+}
+/*----------------------------*/
+/*     ABOUT ME SECTION       */
+/*----------------------------*/
+.about-me {
+  padding: 100px  0px; /* Ajuste para o espaçamento vertical desejado */
+  color: #fff; /* Texto branco */
+  background-color: #000; /* Fundo preto */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: row; /* Organiza os itens em linha */
+}
+
+.about-me-content {
+  flex: 1; /* Ocupa o espaço disponível proporcionalmente */
+  display: flex;
+  flex-direction: column; /* Itens empilhados verticalmente dentro deste contêiner */
+  align-items: center; /* Alinha os itens à esquerda */
+  padding-right: 10px; /* Espaçamento entre o texto e a imagem */
+}
+
+.about-me-content h2 {
+  font-size: 129px;
+  font-weight: 400;
+  letter-spacing: -9px;
+  text-align: center;
+  padding-left:100px;
+}
+
+.about-me-content h3 {
+  font-family: "DreamAvenue";
+  letter-spacing: -1px;
+  font-size: 69px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 100px;
+}
+
+.about-me-content p {
+  font-size: 33px;
+  max-width: 700px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-left: auto; /* Alinha à esquerda com o restante do conteúdo */
+  text-align: justify;
+  text-transform: uppercase;
+  padding-left: 100px;
+}
+
+
+.about-me-content h2,
+.about-me-content h3,
+.about-me-content p {
+  margin: -12px 0; /* Espaçamento vertical entre os itens */
+  text-align: justify;
+  padding-left:auto;
+}
+
+/* Estilos específicos para h2 e h3 se necessário */
+
+.about-me-image {
+  flex: 1; /* Ocupa o espaço disponível proporcionalmente */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.about-me-image img {
+  width: auto; /* Mantém a proporção da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  max-width: none; /* Permite que a imagem cresça além de 100% se necessário */
+  max-height: 100%; /* Ajuste para o tamanho desejado da imagem, poderia ser um valor em px também */
+}
+
+/*----------------------------*/
+/*    My Experience Section   */
+/*----------------------------*/
+
+.my-experience {
+  background-color: #000; /* Fundo preto para a seção */
+}
+
+.experience-header {
+  background-image: url('../assets/img/myexperiencebar.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 150px 0; /* Ajuste do espaçamento conforme a imagem */
+
+}
+
+.experience-header h1 {
+  padding-right: 1.1em;
+}
+.experience-header h2 {
+  padding-right: 0.5em;
+}
+
+.experience-header h1,
+.experience-header h2 {
+  display: inline-block; /* Keeps the titles on the same line */
+  color: white;
+  font-size: 6.5em; /* May need to adjust depending on screen size */
+  margin-top: -0.3em; /* Removes default margins */
+  line-height: 1; /* Adjusts line spacing */
+  font-weight: 500;
+  vertical-align: top; /* Vertically aligns with the line */ /* Alinha verticalmente com a linha */
+}
+
+.experience-title {
+  display: inline-block; /* Isso ajuda a manter o MY e EXPERIENCE na mesma linha */
+}
+
+.experience-title h1,
+.experience-title h2 {
+  display: inline; /* Mantém os títulos na mesma linha */
+  color: white;
+  font-weight: 600;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+}
+
+.experience-title h1 {
+  font-size: 6em;
+  margin-bottom: -10em;
+  /* Ajuste de alinhamento conforme necessário */
+}
+
+.experience-title h2 {
+  font-size: 6em;
+  /* Ajuste de alinhamento conforme necessário */
+  margin-left: -10em; /* Ajuste fino para alinhamento do texto */
+}
+.experience-line {
+  margin: 20px;
+}
+
+.experience-content {
+  background-color: #000; /* Fundo preto para a lista de experiências */
+  padding: 50px; /* Espaçamento interno */
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 80%; /* Ou qualquer outra largura que você desejar */
+  margin: auto; /* Isso centraliza o .experience-item horizontalmente */
+}
+
+.content-with-border {
+  border-bottom: 1px solid #fff; /* A linha divisória */
+  flex-grow: 1;
+  width: 100%; /* Ou qualquer outra largura que você desejar */
+  margin-right: auto; /* Para empurrar o toggle para a direita */
+}
+
+.experience-details {
+  display: flex;
+  justify-content: start; /* Alinha os itens à esquerda */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Exemplo: Define a largura dos detalhes e da linha */
+}
+
+.experience-details h3 {
+  font-size: 2em;
+  margin-right: auto; /* Isso empurra tudo o que vem depois para a direita */
+  padding-left: 80px;
+}
+
+.experience-details p {
+  font-size: 2em;
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-right: 100px;
+}
+
+.experience-toggle {
+  padding-left: 20px; /* Adiciona um pouco de espaço antes do ícone + */
+}
+
+.experience-toggle span {
+  font-size: 5.5em; /* Ajuste o tamanho do ícone conforme necessário */
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.add-experience-button {
+  /* Estilização do botão */
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  padding: 1px 150px;
+  font-size: 3.5em;
+  cursor: pointer;
+  margin-top: 70px;
+  color: white;
+  margin-left: 1250px;
+  position: block;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  .experience-header h1,
+  .experience-header h2 {
+    font-size: 3em; /* Reduces text size for mobile devices */
+  }
+
+  .experience-content {
+    padding: 30px; /* Reduces padding for mobile devices */
+  }
+
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-experience-button {
+    /* Adjustments for the button on mobile devices */
+    width: 90%;
+  }
+}
+
+/*----------------------------*/
+/*    Letreiro Ticker         */
+/*----------------------------*/
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  padding: 10px 0;
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: move 11s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-content {
+  display: inline-block;
+  min-width: 200%; /* Ajuste para garantir que haja conteúdo suficiente para o loop contínuo */
+  color: #fff; /* Cor do texto */
+  font-size: 3.5rem; /* Tamanho do texto */
+}
+
+.ticker-wrap:hover .ticker {
+  animation-play-state: paused; /* Pausa a animação quando o mouse está em cima */
+}
+
+/*----------------------------*/
+/*    Personal Projects       */
+/*----------------------------*/
+
+.selected-works {
+  padding: 100px 0; /* Adjust vertical spacing as needed */
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.projects-intro {
+  font-size: 2em;
+  background-image: url('../assets/img/selectedbg.png'); /* Adjust the path as needed */
+  background-repeat: no-repeat;
+  background-size: cover; /* This will cover the entire area of the element */
+  background-position: left center; /* Adjust the position to fit the image as needed */
+  padding: 25px 80px 30px 60px; /* Adjust the padding to ensure there's space for the background */ 
+  height: 535px;
+  text-align: left;
+  border-top-right-radius: 150px; /* Ajuste o valor conforme necessário */
+  background-clip: border-box; /* Garante que o background respeite o border-radius */
+  overflow: hidden; /* Isso garante que o background não vaze fora do border-radius */
+  border: 5px solid #ffffff;
+  width: 1000px;
+}
+
+.projects-intro h1, h2{
+  font-weight: bold;
+  margin: 0;
+  font-size: 85px;
+  line-height: 85px /* Adjust line-height as per design */
+}
+
+
+.projects-intro p {
+  margin: 0;
+  padding-left: .5%; /* Adjust the padding to align text as per design */
+  bottom: 20%; /* Position it from the bottom */
+  font-size: 42px;
+  font-weight: 500;
+  justify-content: flex-start;
+
+}
+
+.circle-container {
+  color: #fff; /* ou a cor que desejar para o texto */
+  font-size: 2em; /* ou o tamanho que desejar para o texto */
+  width: 1000px; /* ou a largura que desejar */
+  text-align: center;
+  margin: 100px auto;
+  animation: rotate 10s linear infinite;
+}
+
+.circle {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  width: 55%;
+}
+/*----------------------------*/
+/*   project cards            */
+/*----------------------------*/
+
+.paolo- {
+  margin: 0;
+}
+.paolo-fornasier {
+  position: relative;
+  top: 0px;
+  left: 46px;
+  letter-spacing: 5px;
+  line-height: 77.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Open Sans';
+}
+.creare-il-marchio {
+  position: relative;
+  top: 188px;
+  left: 0px;
+  font-size: 21.5px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  width: 177.8px;
+}
+.il-payoff {
+  position: absolute;
+  top: 187px;
+  left: 228.69px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 216.9px;
+}
+.paolo-fornasier-parent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 445.6px;
+  height: 337px;
+}
+.div {
+  position: absolute;
+  top: 143px;
+  right: 0px;
+  font-size: 109px;
+  line-height: 50px;
+}
+.group-container {
+  position: absolute;
+  top: 32px;
+  left: 0px;
+  width: 538px;
+  height: 337px;
+}
+.rectangle-icon {
+  position: absolute;
+  top: 0px;
+  left: 590px;
+  width: 1349px;
+  height: 400px;
+  object-fit: contain;
+}
+.group-parent {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  text-align: right;
+  font-size: 60px;
+  color: #fff;
+  font-family: Inter;
+}
+
+/*----------------------------*/
+/*   Animations (Send to final */
+/*----------------------------*/
+
+
+#noiseCanvas {
+  position: fixed; /* ou absolute, dependendo de sua estrutura */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Para garantir que fique atrás de outros elementos */
+}
